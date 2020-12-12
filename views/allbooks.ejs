@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-books</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body><div id="bookss">
+    <center>
+        <div id="routes">
+            <a href="/mybooks">My-Books</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <h3 style="margin-bottom: 80px; color: white; font-size: 20px; font-weight: 400;">All Books</h3>
+        
+        <% allbooks.reverse().forEach(function(book){ %> 
+            <div class="apk">
+                <h2><%= book.bookname%> is written by <%=book.author.name%></h2>
+                <small>Price- rs<%=book.bookprice%></small>
+                <br>
+            </div>
+        
+        <%})%>
+    </center>
+</div>
+</body>
+</html>

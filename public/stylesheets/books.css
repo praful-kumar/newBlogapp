@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+#main{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(8, 144, 185);
+    padding: 20px;
+    overflow: hidden;
+  }
+#routes{
+    width: 100%;
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 33px;
+    position: absolute;
+  }
+#routes>a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid#fff;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 400;
+  
+  }
+.apk{
+    padding: 20px;
+    width:400px;
+    height: 180px;
+    background-color:#fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .apk>h2{
+    text-transform: capitalize;
+    font-size:20px;
+    font-weight: 400;
+    color: rgb(15, 102, 102);
+  }
+  .apk>small{
+    color: rgb(219, 120, 6);
+    display: block;
+  }
+.apk>form{
+    
+    display: none;
+    transition: ease-in-out;
+    
+  }
+.apk form> input{
+    width: 200px;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.315);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 20px;
+  }
+.apk form input[type = submit]{
+    background-color: green;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 350;
+    margin-left: 15px;
+    text-transform: capitalize;
+  }
+.apk #tags a{
+    text-decoration: none;
+    margin-right: 50px;
+    border: 1px solid rgb(204, 12, 12);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: rgb(204, 12, 12);
+    user-select: none;
+}
+.apk #tags a:hover{
+  background-color:rgb(204, 12, 12);
+  color: white;
+  animation: ease-in;
+
+
+}
+
+#routes{
+    width: 100%;
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 33px;
+    position: absolute;
+}
+#tags{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tags h3{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgb(98, 143, 9);
+    border: 1px solid rgb(98, 143, 9) ;
+    padding: 4px 15px;
+    border-radius: 15px;
+    user-select: none;
+}
+#tags h3:hover{
+  background-color: rgb(98, 143, 9) ;
+  color: white;
+}
+
+

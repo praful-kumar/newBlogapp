@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="../stylesheets/addbook.css">
+</head>
+
+<body>
+    <div id="main">
+        <h2>Create Books</h2>
+        <div id="routes">
+            <a href="/allbooks">All-Books</a>
+            <a href="/mybooks">My-Books</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <form action="/regbook" method="POST">
+            <input type="text" placeholder="Book Name" name="bookname">
+            <input type="number" placeholder="Book Price" value="" name="bookprice">
+            <input type="submit" value="create New Book">
+        </form><br>
+    </div>
+
+</body>
+
+</html>

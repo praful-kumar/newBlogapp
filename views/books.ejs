@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-books</title>
+    <link rel="stylesheet" href="../stylesheets/books.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="routes">
+            <a href="/allbooks">All-Books</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <center>
+        <h3 style="margin-bottom: 100px; color: white; font-size: 20px; font-weight: 400;">My Books List</h3>
+        </center>
+        <% allbooks.book.reverse().forEach(function(book){ %>
+        <center>
+            <div class="apk">
+                <h2><%=book.bookname%></h2>
+                <small> ₹ <%=book.bookprice%></small>
+                <div id="tags">
+                    <a href=<%= '/delete/'+book.id%>>Delete-Book</a>
+                    <h3 class="uptxt">update</h3>
+                </div>
+                <form class="fms" action=<%= '/update/'+book.id%> method="post">
+                    <input type="text" placeholder="Book Name" name="name">
+                    <input type="submit" value="Update">
+                </form>
+                <br>
+            </div>
+
+            <%})%>
+        </center>
+    </div>
+    <script>
+        document.querySelectorAll('.uptxt').forEach(items => {
+            items.addEventListener("click", function () {
+                change();
+            })
+        })
+        var change = function () {
+            document.querySelectorAll('.fms').forEach(item => {
+                item.style.display = "flex";
+            })
+        }
+
+        document.querySelectorAll('.uptxt').forEach(items => {
+            items.addEventListener("dblclick", function () {
+                change1();
+            })
+        })
+        var change1 = function () {
+            document.querySelectorAll('.fms').forEach(item => {
+                item.style.display = "none";
+            })
+        }
+
+    </script>
+</body>
+
+</html>
